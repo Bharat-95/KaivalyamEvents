@@ -37,7 +37,7 @@ const HowItWorks = () => {
         How it works
       </h2>
       <p className="text-[#c79f3e] tracking-wide mt-2 uppercase text-sm font-medium">
-        5 Easy Steps for a Hassle-Free Wedding
+      Decor Made Easy: 5 Steps to a Flawless Event Look
       </p>
 
       {/* Grid layout with reduced gap */}
