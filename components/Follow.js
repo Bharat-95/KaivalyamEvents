@@ -39,10 +39,21 @@ const Follow = () => {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 1 }}
       viewport={{ once: true }}
-      className="w-full  py-10 px-4 md:px-12 space-y-10"
+      className="w-full py-10 px-4 md:px-12 space-y-10"
     >
-      <div className="max-w-7xl mx-auto w-full rounded-2xl overflow-hidden shadow-lg ">
-        <div className="sk-instagram-feed bg-black" data-embed-id="25548414"  />
+      {/* Heading */}
+      <div className="text-center">
+        <h2 className={`${quicksand.className} text-3xl font-bold text-[#c79f3e]`}>
+          Follow Us on Instagram
+        </h2>
+        <p className={`${pacifico.className} text-xl text-[#c79f3e]`}>
+          @hyderabadeventplanners
+        </p>
+      </div>
+
+      {/* Instagram Feed Embed */}
+      <div className="max-w-7xl mx-auto w-full rounded-2xl overflow-hidden shadow-lg">
+        <div className="sk-instagram-feed bg-black" data-embed-id="25548414" />
       </div>
     </motion.div>
   );
