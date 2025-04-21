@@ -42,19 +42,7 @@ const Follow = () => {
       className="w-full  py-10 px-4 md:px-12 space-y-10"
     >
       {/* Heading */}
-      <div className="text-center space-y-2">
-        <h2
-          className={`${quicksand.className} text-3xl md:text-4xl font-bold text-[#c79f3e]`}
-        >
-          Follow Us on Instagram
-        </h2>
-        <p className={`${pacifico.className} text-[#c79f3e] text-xl`}>
-          <Link href={instagramUrl} target="_blank">
-            @KaivalyaEvents
-          </Link>
-        </p>
-      </div>
-
+    
       {/* Instagram Feed Embed */}
       <div className="max-w-7xl mx-auto w-full rounded-2xl overflow-hidden shadow-lg ">
         <div className="sk-instagram-feed bg-black" data-embed-id="25548414"  />
