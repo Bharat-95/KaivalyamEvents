@@ -2,12 +2,10 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { FaRegEnvelopeOpen, FaGift, FaVideo, FaHandsHelping } from "react-icons/fa";
+import { FaRegEnvelopeOpen, FaGift, FaVideo, FaHandsHelping, FaCameraRetro } from "react-icons/fa";
 import { GiPartyPopper } from "react-icons/gi";
 import { MdOutlineManageAccounts } from "react-icons/md";
 import { Pacifico, Quicksand, Poppins } from "next/font/google";
-import { FaCameraRetro } from "react-icons/fa";
-
 
 const quicksand = Quicksand({ weight: ["400", "700"], subsets: ["latin"] });
 const pacifico = Pacifico({ weight: ["400"], subsets: ["latin"] });
@@ -37,7 +35,7 @@ const ServicesOverview = () => {
         </p>
       </motion.div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 mt-10">
         {services.map((service, index) => (
           <motion.div
             key={index}
@@ -45,15 +43,26 @@ const ServicesOverview = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
             viewport={{ once: true }}
-            className=" p-6 rounded-xl shadow-md hover:shadow-xl transition duration-300 flex flex-col items-center text-center"
+            className="w-64 h-64 mx-auto flex items-center justify-center relative group"
           >
-            <div className="text-[#c79f3e] mb-4">{service.icon}</div>
-            <h4 className={`${quicksand.className} font-semibold text-lg text-[#c79f3e]`}>
-              {service.title}
-            </h4>
+            <div className="absolute inset-0 bg-[#ffe5ae] text-[#c79f3e] p-6 clip-hexagon shadow-xl hover:shadow-2xl transition-all duration-300 flex flex-col items-center justify-center text-center">
+              <div className="mb-3">{service.icon}</div>
+              <h4 className={`${quicksand.className} font-semibold text-lg`}>{service.title}</h4>
+            </div>
           </motion.div>
         ))}
       </div>
+
+      <style jsx>{`
+        .clip-hexagon {
+          clip-path: polygon(
+            25% 5%, 75% 5%, 
+            100% 50%, 
+            75% 95%, 25% 95%, 
+            0% 50%
+          );
+        }
+      `}</style>
     </div>
   );
 };
