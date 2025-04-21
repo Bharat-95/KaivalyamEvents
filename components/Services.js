@@ -38,7 +38,7 @@ const ServicesOverview = () => {
         <h2 className={`${pacifico.className} text-3xl md:text-4xl text-[#c79f3e] mb-4`}>
           Our Services
         </h2>
-        <p className={`${poppins.className} text-[#c79f3e] max-w-3xl mx-auto text-[15px]`}>
+        <p className={`${poppins.className} text-[#c79f3e] max-w-3xl mx-auto text-lg`}>
           Whether you&apos;re dreaming of an intimate celebration or a grand wedding spectacle, we craft every detail with purpose and personality. Our services blend design, coordination, and flair — ensuring your story shines through every element.
         </p>
       </motion.div>
