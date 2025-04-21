@@ -50,7 +50,7 @@ const DecorCoverageSection = () => {
           className="space-y-4"
         >
           <h2 className={`${quicksand.className} text-3xl text-[#c79f3e] font-bold`}>
-            What We Cover in Event & Décor
+            What We Cover in Event & Decor
           </h2>
           <p className={`${poppins.className} text-[#c79f3e] text-base leading-relaxed`}>
             You might not need to add more decorations if your event is being held at a unique or upscale

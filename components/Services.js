@@ -28,7 +28,7 @@ const services = [
 
 const ServicesOverview = () => {
   return (
-    <div className="w-full py-14 px-4 md:px-8 text-center space-y-10">
+    <div className="w-full py-14 px-4 md:px-10 lg:px-20 text-center space-y-10">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -38,12 +38,14 @@ const ServicesOverview = () => {
         <h2 className={`${pacifico.className} text-3xl md:text-4xl text-[#c79f3e] mb-4`}>
           Our Services
         </h2>
-        <p className={`${poppins.className} text-[#c79f3e] max-w-3xl mx-auto text-lg`}>
-          Whether you&apos;re dreaming of an intimate celebration or a grand wedding spectacle, we craft every detail with purpose and personality. Our services blend design, coordination, and flair — ensuring your story shines through every element.
+        <p className={`${poppins.className} text-[#c79f3e] max-w-3xl mx-auto text-[16px] md:text-lg`}>
+          Whether you&apos;re dreaming of an intimate celebration or a grand wedding spectacle,
+          we craft every detail with purpose and personality. Our services blend design, coordination,
+          and flair — ensuring your story shines through every element.
         </p>
       </motion.div>
 
-      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 gap-x-2 gap-y-6 justify-center w-[50%] mx-auto">
+      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-x-3 gap-y-6 max-w-6xl mx-auto">
         {services.map((service, index) => (
           <motion.div
             key={index}
@@ -51,11 +53,11 @@ const ServicesOverview = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
             viewport={{ once: true }}
-            className="w-40 h-40 mx-auto flex items-center justify-center relative"
+            className="w-[110px] h-[110px] sm:w-[120px] sm:h-[120px] md:w-[130px] md:h-[130px] mx-auto flex items-center justify-center relative"
           >
             <div className="absolute inset-0 bg-[#ffe5ae] text-[#c79f3e] p-3 clip-hexagon shadow-md hover:shadow-xl transition-all duration-300 flex flex-col items-center justify-center text-center">
               <div className="mb-1">{service.icon}</div>
-              <h4 className={`${quicksand.className} font-semibold text-xs`}>
+              <h4 className={`${quicksand.className} font-semibold text-xs leading-tight`}>
                 {service.title}
               </h4>
             </div>

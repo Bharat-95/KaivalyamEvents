@@ -13,7 +13,7 @@ const poppins = Poppins({ weight: ["400", "500", "600"], subsets: ["latin"] });
 const paragraphs = [
   `At Kaivalyam Events, we believe that the true success of any event lies in how it feels — the joy in the room, the sparkle in the décor, and the memories etched forever in the hearts of your guests.`,
   `Rooted in passion and driven by precision, we are a team of expert event designers dedicated to creating extraordinary experiences. From intimate gatherings to lavish affairs, we offer seamless planning, artistic styling, and management solutions that reflect your vision — effortlessly and elegantly.`,
-  `Whether it's a floral fairytale or a modern minimalist soirée, Kaivalyam Events approaches each celebration with unmatched creativity and care.`,
+  `Whether it's a floral fairytale or a modern minimalist soire, Kaivalyam Events approaches each celebration with unmatched creativity and care.`,
   `Let us help you craft a celebration that’s not just seen — but felt.`,
 ];
 
