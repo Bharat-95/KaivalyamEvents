@@ -37,7 +37,7 @@ const HowItWorks = () => {
       <h2 className={`${quicksand.className} text-3xl font-bold text-[#c79f3e]`}>
         How it works
       </h2>
-      <p className={`text-[#c79f3e] tracking-wide mt-2 uppercase text-sm font-medium ${pacifico.className}`}>
+      <p className={`text-[#c79f3e] mt-2 text-xl font-medium ${pacifico.className}`}>
       Decor Made Easy: 5 Steps to a Flawless Event Look
       </p>
 

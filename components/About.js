@@ -10,6 +10,13 @@ const pacifico = Pacifico({ weight: ["400"], subsets: ["latin"] });
 const quicksand = Quicksand({ weight: ["400", "700"], subsets: ["latin"] });
 const poppins = Poppins({ weight: ["400", "500", "600"], subsets: ["latin"] });
 
+const paragraphs = [
+  `At Kaivalyam Events, we believe that the true success of any event lies in how it feels — the joy in the room, the sparkle in the décor, and the memories etched forever in the hearts of your guests.`,
+  `Rooted in passion and driven by precision, we are a team of expert event designers dedicated to creating extraordinary experiences. From intimate gatherings to lavish affairs, we offer seamless planning, artistic styling, and management solutions that reflect your vision — effortlessly and elegantly.`,
+  `Whether it's a floral fairytale or a modern minimalist soirée, Kaivalyam Events approaches each celebration with unmatched creativity and care.`,
+  `Let us help you craft a celebration that’s not just seen — but felt.`,
+];
+
 const AboutSection = () => {
   return (
     <motion.div
@@ -30,45 +37,52 @@ const AboutSection = () => {
 
       {/* Content Row */}
       <div className="grid lg:grid-cols-2 gap-12 items-center">
-        {/* Text */}
-        <div className={`${poppins.className} space-y-5 text-[#c79f3e] text-lg`}>
-          <p>
-            At <strong>Kaivalyam Events</strong>, we believe that the true success of any event lies in how it
-            <em> feels</em> — the joy in the room, the sparkle in the décor, and the memories etched
-            forever in the hearts of your guests.
-          </p>
-          <p>
-            Rooted in passion and driven by precision, we are a team of expert event designers dedicated to
-            creating extraordinary experiences. From intimate gatherings to lavish affairs, we offer seamless
-            planning, artistic styling, and management solutions that reflect your vision — effortlessly and elegantly.
-          </p>
-          <p>
-            Whether it&apos;s a <em>floral fairytale</em> or a <em>modern minimalist soirée</em>, Kaivalyam Events approaches each
-            celebration with unmatched creativity and care.
-          </p>
-          <p className="text-base font-medium italic text-[#c79f3e]">
-            Let us help you craft a celebration that’s not just seen — but felt.
-          </p>
+        {/* Text Section with Animated Paragraphs */}
+        <div className={`${poppins.className} text-[#c79f3e] text-lg space-y-5`}>
+          {paragraphs.map((text, index) => (
+            <motion.p
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.5 }}
+              viewport={{ once: true }}
+              className={index === paragraphs.length - 1 ? "italic text-base font-medium" : ""}
+            >
+              {text}
+            </motion.p>
+          ))}
 
           {/* Portfolio Button */}
-          <div className="pt-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: paragraphs.length * 0.5 }}
+            viewport={{ once: true }}
+            className="pt-4"
+          >
             <Link href="/portfolio">
               <button className="bg-[#c79f3e] text-white px-6 py-2 rounded-full shadow-md hover:scale-105 transition duration-300">
-               Portfolio &gt;
+                Portfolio &gt;
               </button>
             </Link>
-          </div>
+          </motion.div>
         </div>
 
         {/* Image */}
-        <div className="w-full h-[400px] relative rounded-2xl overflow-hidden shadow-xl">
+        <motion.div
+          initial={{ opacity: 0, x: 30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1, delay: 0.3 }}
+          viewport={{ once: true }}
+          className="w-full h-[400px] relative rounded-2xl overflow-hidden shadow-xl"
+        >
           <Image
-            src="/About.webp" // Replace with your preferred image path
+            src="/About.webp"
             alt="Kaivalyam Events About"
             fill
             className="object-cover"
           />
-        </div>
+        </motion.div>
       </div>
     </motion.div>
   );
