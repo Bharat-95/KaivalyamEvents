@@ -33,26 +33,35 @@ const steps = [
 const HowItWorks = () => {
   return (
     <div className="py-16 px-6 md:px-10 text-center">
-      <h2 className={`${quicksand.className} text-3xl font-bold text-[#c79f3e]`}>How it works</h2>
+      <h2 className={`${quicksand.className} text-3xl font-bold text-[#c79f3e]`}>
+        How it works
+      </h2>
       <p className="text-[#c79f3e] tracking-wide mt-2 uppercase text-sm font-medium">
         5 Easy Steps for a Hassle-Free Wedding
       </p>
 
-      <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5">
+      {/* Grid layout with reduced gap */}
+      <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3">
         {steps.map((step, index) => (
           <motion.div
             key={index}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: index * 0.1 }}
+            transition={{
+              duration: 0.8,
+              delay: index * 1, // each step shows every 5 seconds
+              ease: "easeOut",
+            }}
             viewport={{ once: true }}
-            className="flex flex-col items-center"
+            className="flex flex-col items-center space-y-2"
           >
-            <div className="bg-[#c79f3e] text-white w-12 h-12 rounded-full flex items-center justify-center text-lg font-bold mb-4 shadow-md">
+            <div className="bg-[#c79f3e] text-white w-12 h-12 rounded-full flex items-center justify-center text-lg font-bold shadow-md">
               {`0${index + 1}`}
             </div>
-            <h4 className={`${quicksand.className} font-semibold text-lg text-[#c79f3e]`}>{step.title}</h4>
-            <p className={`${poppins.className} text-sm text-[#c79f3e] mt-1 max-w-[200px]`}>
+            <h4 className={`${quicksand.className} font-semibold text-lg text-[#c79f3e]`}>
+              {step.title}
+            </h4>
+            <p className={`${poppins.className} text-sm text-[#c79f3e] max-w-[180px]`}>
               {step.subtitle}
             </p>
           </motion.div>
