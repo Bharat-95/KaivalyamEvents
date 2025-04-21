@@ -51,7 +51,7 @@ const ServicesOverview = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
             viewport={{ once: true }}
-            className="w-32 h-32 mx-auto flex items-center justify-center relative"
+            className="w-40 h-40 mx-auto flex items-center justify-center relative"
           >
             <div className="absolute inset-0 bg-[#ffe5ae] text-[#c79f3e] p-3 clip-hexagon shadow-md hover:shadow-xl transition-all duration-300 flex flex-col items-center justify-center text-center">
               <div className="mb-1">{service.icon}</div>

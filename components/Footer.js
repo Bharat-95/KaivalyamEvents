@@ -13,7 +13,7 @@ const Footer = () => {
       {/* Decorative Underline Image */}
    {/* Repeating Underline Background */}
 <div
-  className="w-full h-6 bg-repeat-x mb-8"
+  className="w-full h-7 bg-repeat-x mb-8"
   style={{
     backgroundImage: 'url("/underline.webp")',
     backgroundSize: 'auto 100%',
