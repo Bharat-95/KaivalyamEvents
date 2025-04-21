@@ -2,6 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { Pacifico, Quicksand, Poppins } from "next/font/google";
 
@@ -15,7 +16,7 @@ const AboutSection = () => {
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 1 }}
-      className="relative w-full  py-20 px-6 md:px-16 lg:px-24"
+      className="relative w-full py-20 px-6 md:px-16 lg:px-24"
     >
       {/* Title */}
       <div className="text-center mb-12">
@@ -48,6 +49,15 @@ const AboutSection = () => {
           <p className="text-base font-medium italic text-[#c79f3e]">
             Let us help you craft a celebration that’s not just seen — but felt.
           </p>
+
+          {/* Portfolio Button */}
+          <div className="pt-4">
+            <Link href="/portfolio">
+              <button className="bg-[#c79f3e] text-white px-6 py-2 rounded-full shadow-md hover:scale-105 transition duration-300">
+               Portfolio &gt;
+              </button>
+            </Link>
+          </div>
         </div>
 
         {/* Image */}
