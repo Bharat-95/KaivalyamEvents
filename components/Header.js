@@ -31,8 +31,11 @@ const Header = () => {
   return (
     <div className="flex items-center  bg-white justify-between lg:px-10 md:px-10 px-4  h-24 text-[#c79f3e] mb-10 rounded-b-xl sticky top-0 z-50  shadow-md">
       {/* Logo */}
+      <div className="flex items-center gap-2">
       <div className=" h-20  w-20 bg-black rounded-full">
         <Image src="/Logo.png" alt="Logo" height={1000} width={1000} className=" w-20  h-20" />
+      </div>
+      <spa className={`text-[#c79f3e] text-2xl ${pacifico.className}`}>kaivalyam Events</spa>
       </div>
 
       {/* Desktop Navbar */}
