@@ -29,10 +29,10 @@ const Header = () => {
   ];
 
   return (
-    <div className="flex items-center  justify-between lg:px-10 md:px-10 px-4 lg:h-40 md:h-40 h-20 text-[#c79f3e] mb-10 rounded-b-xl sticky z-50  shadow-md">
+    <div className="flex items-center  bg-white justify-between lg:px-10 md:px-10 px-4  h-24 text-[#c79f3e] mb-10 rounded-b-xl sticky top-0 z-50  shadow-md">
       {/* Logo */}
-      <div className="lg:h-40 md:h-40 h-20 lg:w-40 md:w-40 w-20 bg-black rounded-full">
-        <Image src="/Logo.png" alt="Logo" height={1000} width={1000} className="lg:w-40 md:w-40 w-20 lg:h-40 md:h-40 h-20" />
+      <div className=" h-20  w-20 bg-black rounded-full">
+        <Image src="/Logo.png" alt="Logo" height={1000} width={1000} className=" w-20  h-20" />
       </div>
 
       {/* Desktop Navbar */}
