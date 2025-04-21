@@ -41,9 +41,6 @@ const Follow = () => {
       viewport={{ once: true }}
       className="w-full  py-10 px-4 md:px-12 space-y-10"
     >
-      {/* Heading */}
-    
-      {/* Instagram Feed Embed */}
       <div className="max-w-7xl mx-auto w-full rounded-2xl overflow-hidden shadow-lg ">
         <div className="sk-instagram-feed bg-black" data-embed-id="25548414"  />
       </div>
