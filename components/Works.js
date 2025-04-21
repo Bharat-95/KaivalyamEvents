@@ -1,11 +1,12 @@
 "use client";
 
 import React from "react";
-import { Quicksand, Poppins } from "next/font/google";
+import { Quicksand, Poppins, Pacifico } from "next/font/google";
 import { motion } from "framer-motion";
 
 const quicksand = Quicksand({ weight: ["400", "700"], subsets: ["latin"] });
 const poppins = Poppins({ weight: ["400", "500"], subsets: ["latin"] });
+const pacifico = Pacifico({ weight: ["400"], subsets: ["latin"] });
 
 const steps = [
   {
@@ -36,7 +37,7 @@ const HowItWorks = () => {
       <h2 className={`${quicksand.className} text-3xl font-bold text-[#c79f3e]`}>
         How it works
       </h2>
-      <p className="text-[#c79f3e] tracking-wide mt-2 uppercase text-sm font-medium">
+      <p className={`text-[#c79f3e] tracking-wide mt-2 uppercase text-sm font-medium ${pacifico.className}`}>
       Decor Made Easy: 5 Steps to a Flawless Event Look
       </p>
 
