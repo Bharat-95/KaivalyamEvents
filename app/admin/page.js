@@ -66,60 +66,59 @@ const AdminPage = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center px-4 bg-[#fff6f7]">
+    <div className="min-h-screen flex items-center justify-center px-4 bg-white">
       {!isAuthenticated ? (
         <form
           onSubmit={handleLogin}
           className="bg-white p-8 rounded-2xl shadow-xl w-full max-w-sm space-y-4"
         >
-          <h2 className="text-3xl font-bold text-center text-[#C45C61]">Admin Login</h2>
+          <h2 className="text-3xl font-bold text-center text-[#c79f3e]">Admin Login</h2>
           <input
             type="email"
             placeholder="Email"
-            className="border p-3 w-full rounded-md focus:ring-2 focus:ring-[#C45C61] outline-none"
+            className="border p-3 w-full rounded-md focus:ring-2 focus:ring-[#c79f3e] outline-none"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
           <input
             type="password"
             placeholder="Password"
-            className="border p-3 w-full rounded-md focus:ring-2 focus:ring-[#C45C61] outline-none"
+            className="border p-3 w-full rounded-md focus:ring-2 focus:ring-[#c79f3e] outline-none"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
           <button
             type="submit"
-            className="bg-[#C45C61] hover:bg-[#b44d56] text-white font-semibold p-3 w-full rounded-md transition"
+            className="bg-[#C45C61] hover:bg-[#c79f3e] text-white font-semibold p-3 w-full rounded-md transition"
           >
             Login
           </button>
         </form>
       ) : (
         <div className="bg-white p-10 rounded-2xl shadow-xl w-full max-w-md text-center space-y-6">
-          <h2 className="text-3xl font-bold text-[#C45C61]">Upload Image</h2>
+          <h2 className="text-3xl font-bold text-[#c79f3e]">Upload Image</h2>
           <div className="flex flex-col gap-4 text-left">
             <input
               type="file"
               onChange={(e) => setFile(e.target.files?.[0] || null)}
-              className="border p-3 rounded-md focus:ring-2 focus:ring-[#C45C61] outline-none"
+              className="border p-3 rounded-md focus:ring-2 focus:ring-[#c79f3e] outline-none"
             />
 
             <select
               value={category}
               onChange={(e) => setCategory(e.target.value)}
-              className="border p-3 rounded-md focus:ring-2 focus:ring-[#C45C61] outline-none"
+              className="border p-3 rounded-md focus:ring-2 focus:ring-[#c79f3e] outline-none"
             >
-              <option value="weddings">Weddings</option>
-              <option value="birthdays">Birthdays</option>
-              <option value="conferences">Conferences</option>
-              <option value="babyshowers">Baby Showers</option>
-              <option value="corporate">Corporate</option>
-              <option value="outdoor">Outdoor Event Decorations</option>
+              <option value="weddings">Wedding Decorations</option>
+              <option value="birthdays"> Birthday Decorations</option>
+              <option value="conferences">Party Decorations</option>
+              <option value="babyshowers">  Outdoor Event Decorations</option>
+              <option value="corporate">Baby Shower Decorations</option>
             </select>
 
             <button
               onClick={handleUpload}
-              className="bg-[#C45C61] hover:bg-[#b44d56] text-white font-semibold p-3 rounded-md transition"
+              className="bg-[#C45C61] hover:bg-[#c79f3e] text-white font-semibold p-3 rounded-md transition"
             >
               {uploading ? "Uploading..." : "Upload"}
             </button>
