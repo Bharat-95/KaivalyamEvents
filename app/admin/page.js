@@ -113,7 +113,7 @@ const AdminPage = () => {
               <option value="birthdays"> Birthday Decorations</option>
               <option value="party">Party Decorations</option>
               <option value="outdoor">  Outdoor Event Decorations</option>
-              <option value="babyShower">Baby Shower Decorations</option>
+              <option value="babyshower">Baby Shower Decorations</option>
             </select>
 
             <button
