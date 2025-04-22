@@ -12,7 +12,6 @@ const page = () => {
   return (
     <div className=''>
       <Hero />
-      <SectionSeparator />
       <AboutSection />
     
       <HowItWorks />
