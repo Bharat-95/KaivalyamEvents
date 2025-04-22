@@ -35,7 +35,7 @@ const Header = () => {
       <div className=" h-20  w-20 bg-black rounded-full">
         <Image src="/Logo.png" alt="Logo" height={1000} width={1000} className=" w-20  h-20" />
       </div>
-      <spa className={`text-[#c79f3e] text-2xl ${pacifico.className}`}>kaivalyam Events</spa>
+      <span className={`text-[#c79f3e] text-2xl ${pacifico.className}`}>kaivalyam Events</span>
       </div>
 
       {/* Desktop Navbar */}
@@ -45,13 +45,13 @@ const Header = () => {
 
         {/* OUR EXPERTISE with Arrow Dropdown */}
         <li className="relative">
-          <div
+          <Link href='/expertise'
             className="flex items-center gap-1 cursor-pointer hover:translate-x-1 hover:-translate-y-1 duration-700"
             onClick={() => setExpertiseOpen(!expertiseOpen)}
           >
             OUR EXPERTISE
             <BiChevronDown size={18} />
-          </div>
+          </Link>
           {expertiseOpen && (
             <ul className="absolute top-full mt-2 bg-white rounded-lg shadow-lg w-64 z-50 text-[#c79f3e]">
               {expertiseLinks.map(({ name, href }) => (
