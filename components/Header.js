@@ -53,7 +53,7 @@ const Header = () => {
             <BiChevronDown size={18} />
           </div>
           {expertiseOpen && (
-            <ul className="absolute top-full mt-2 bg-black rounded-lg shadow-lg w-64 z-50 text-[#c79f3e]">
+            <ul className="absolute top-full mt-2 bg-white rounded-lg shadow-lg w-64 z-50 text-[#c79f3e]">
               {expertiseLinks.map(({ name, href }) => (
                 <li key={name} className="px-4 py-2 hover:bg-[#222] text-sm">
                   <Link href={href}>{name}</Link>
