@@ -49,7 +49,7 @@ const Contact = () => {
               <FaPhoneAlt />
             </div>
             <h3 className="text-xl font-semibold mt-8">Our Phone</h3>
-            <p className="text-lg">+91 98765 43210</p>
+            <p className="text-lg">+91 99859 77703</p>
           </div>
 
           {/* Location */}
@@ -67,7 +67,7 @@ const Contact = () => {
               <FaEnvelope />
             </div>
             <h3 className="text-xl font-semibold mt-8">Our Email</h3>
-            <p className="text-lg">info@kaivalyaevents.com</p>
+            <p className="text-lg">kaivalyamevents@gmail.com</p>
           </div>
         </div>
       </div>

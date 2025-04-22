@@ -43,12 +43,12 @@ const Footer = () => {
             <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
               <FaFacebookF />
             </a>
-            <a href="mailto:kailvalyaevents@gmail.com">
+            <a href="mailto:kaivalyamevents@gmail.com">
               <FaEnvelope />
             </a>
           </div>
-          <p className="text-sm mt-2">Email: kailvalyaevents@gmail.com</p>
-          <p className="text-sm">Phone: +91 98765 43210</p>
+          <p className="text-sm mt-2">Email: kaivalyamevents@gmail.com</p>
+          <p className="text-sm">Phone: +91 99859 77703</p>
         </div>
       </div>
 
