@@ -1,7 +1,7 @@
-import Header from "@/components/Header";
+import Header from "../components/Header";
 import "./globals.css";
-import Footer from "@/components/Footer";
-import SectionSeparator from "@/components/Seperator";
+import Footer from "../components/Footer";
+import SectionSeparator from "../components/Seperator";
 
 
 export const metadata = {

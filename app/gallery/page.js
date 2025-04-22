@@ -110,9 +110,9 @@ const Gallery = () => {
     : 1;
 
   return (
-    <div className="p-5  min-h-screen bg-[#FFEFF1]">
-      <h2 className={`text-3xl font-bold text-center pb-10 text-[#C45C61] ${quicksand.className}`}>
-        Gallery
+    <div className="p-5  min-h-screen bg-white">
+      <h2 className={`text-3xl font-bold text-center pb-10 text-[#c79f3e] ${quicksand.className}`}>
+        Portfolio
       </h2>
 
       {/* Category Covers */}
