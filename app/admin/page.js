@@ -111,9 +111,9 @@ const AdminPage = () => {
             >
               <option value="weddings">Wedding Decorations</option>
               <option value="birthdays"> Birthday Decorations</option>
-              <option value="conferences">Party Decorations</option>
-              <option value="babyshowers">  Outdoor Event Decorations</option>
-              <option value="corporate">Baby Shower Decorations</option>
+              <option value="party">Party Decorations</option>
+              <option value="outdoor">  Outdoor Event Decorations</option>
+              <option value="babyShower">Baby Shower Decorations</option>
             </select>
 
             <button
