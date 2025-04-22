@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import "./globals.css";
 import Footer from "@/components/Footer";
+import SectionSeparator from "@/components/Seperator";
 
 
 export const metadata = {
@@ -16,6 +17,7 @@ export default function RootLayout({ children }) {
       >
         <Header />
         {children}
+        <SectionSeparator />
         <Footer />
       </body>
     </html>

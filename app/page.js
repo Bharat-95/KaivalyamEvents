@@ -20,7 +20,6 @@ const page = () => {
       <ServicesOverview />
       <DecorCoverageSection/>
       <Follow />
-      <SectionSeparator/>
     </div>
   )
 }
