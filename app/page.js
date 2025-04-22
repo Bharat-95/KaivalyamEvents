@@ -3,20 +3,24 @@ import DecorCoverageSection from '@/components/Coverage'
 import CtaBanner from '@/components/CTAbanner'
 import Follow from '@/components/Follow'
 import Hero from '@/components/Hero'
+import SectionSeparator from '@/components/Seperator'
 import ServicesOverview from '@/components/Services'
 import HowItWorks from '@/components/Works'
 import React from 'react'
 
 const page = () => {
   return (
-    <div className='lg:space-y-10'>
+    <div className=''>
       <Hero />
+      <SectionSeparator />
       <AboutSection />
+    
       <HowItWorks />
       <CtaBanner />
       <ServicesOverview />
       <DecorCoverageSection/>
       <Follow />
+      <SectionSeparator/>
     </div>
   )
 }
