@@ -21,11 +21,11 @@ const Header = () => {
   const handleMenu = () => setMenu(!menu);
 
   const expertiseLinks = [
-    { name: "Wedding Decoration", href: "/services/sangeet-decor" },
-    { name: "Birthday Decoration", href: "/services/mehndi-decor" },
-    { name: "Party House Decoration", href: "/services/wedding-house-decor" },
-    { name: "Outdoor Event Decoration", href: "/services/special-occasions" },
-    { name: " Baby Shower Decorations", href: "/services/religious-decor" },
+    { name: "Wedding Decoration", href: "/wedding" },
+    { name: "Birthday Decoration", href: "/birthday" },
+    { name: "Party House Decoration", href: "/party" },
+    { name: "Outdoor Event Decoration", href: "/outdoor" },
+    { name: " Baby Shower Decorations", href: "babyshower" },
   ];
 
   return (
@@ -69,7 +69,7 @@ const Header = () => {
 
       {/* Get Quote Button */}
       <div className={`bg-[#c79f3e] lg:flex hidden text-white p-2 rounded-md shadow-md ${quicksand.className} font-bold hover:translate-x-1 hover:-translate-y-1 duration-700`}>
-        <Link href="/quote">Get Quote</Link>
+        <Link href="/contact">Get Quote</Link>
       </div>
 
       {/* Mobile Menu Icon */}
@@ -107,7 +107,7 @@ const Header = () => {
             <li onClick={handleMenu}><Link href="/contact">CONTACT</Link></li>
 
             <li onClick={handleMenu} className="bg-[#c79f3e] w-fit px-4 py-2 text-white rounded-md shadow-md">
-              <Link href="/quote">Get Quote</Link>
+              <Link href="/contact">Get Quote</Link>
             </li>
           </ul>
         </div>

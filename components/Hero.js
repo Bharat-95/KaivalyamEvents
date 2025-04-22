@@ -65,7 +65,7 @@ const Hero = () => {
           Crafting Moments, Creating Memories
         </p>
 
-        <Link href="/quote" className={`bg-[#c79f3e] text-white py-2 px-4 mt-4 rounded-md shadow-md ${quicksand.className} font-semibold hover:translate-x-[1px] hover:-translate-y-[1px] duration-500 hover:shadow-white hover:shadow-xl`}>
+        <Link href="/contact" className={`bg-[#c79f3e] text-white py-2 px-4 mt-4 rounded-md shadow-md ${quicksand.className} font-semibold hover:translate-x-[1px] hover:-translate-y-[1px] duration-500 hover:shadow-white hover:shadow-xl`}>
           Get a Quote
         </Link>
 
