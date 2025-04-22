@@ -21,11 +21,11 @@ const Header = () => {
   const handleMenu = () => setMenu(!menu);
 
   const expertiseLinks = [
-    { name: "Sangeet Decor", href: "/services/sangeet-decor" },
-    { name: "Mehndi Decor", href: "/services/mehndi-decor" },
-    { name: "Wedding House Decor", href: "/services/wedding-house-decor" },
-    { name: "Special Occasions", href: "/services/special-occasions" },
-    { name: "Religious Events Decor", href: "/services/religious-decor" },
+    { name: "Wedding Decoration", href: "/services/sangeet-decor" },
+    { name: "Birthday Decoration", href: "/services/mehndi-decor" },
+    { name: "Party House Decoration", href: "/services/wedding-house-decor" },
+    { name: "Outdoor Event Decoration", href: "/services/special-occasions" },
+    { name: " Baby Shower Decorations", href: "/services/religious-decor" },
   ];
 
   return (
