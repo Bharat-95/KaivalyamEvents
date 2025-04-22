@@ -63,8 +63,7 @@ const Header = () => {
           )}
         </li>
 
-        <li className="hover:translate-x-1 hover:-translate-y-1 duration-700"><Link href="/portfolio">PORTFOLIO</Link></li>
-        <li className="hover:translate-x-1 hover:-translate-y-1 duration-700"><Link href="/gallery">GALLERY</Link></li>
+        <li className="hover:translate-x-1 hover:-translate-y-1 duration-700"><Link href="/gallery">PORTFOLIO</Link></li>
         <li className="hover:translate-x-1 hover:-translate-y-1 duration-700"><Link href="/contact">CONTACT</Link></li>
       </ul>
 
@@ -104,8 +103,7 @@ const Header = () => {
               </ul>
             )}
 
-            <li onClick={handleMenu}><Link href="/portfolio">PORTFOLIO</Link></li>
-            <li onClick={handleMenu}><Link href="/gallery">GALLERY</Link></li>
+            <li onClick={handleMenu}><Link href="/gallery">PORTFOLIO</Link></li>
             <li onClick={handleMenu}><Link href="/contact">CONTACT</Link></li>
 
             <li onClick={handleMenu} className="bg-[#c79f3e] w-fit px-4 py-2 text-white rounded-md shadow-md">
