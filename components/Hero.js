@@ -73,7 +73,7 @@ const Hero = () => {
         <div className="absolute lg:bottom-10 md:bottom-10 hidden md:flex items-center gap-4 text-[#c79f3e]">
           <span className={`${poppins.className} font-medium`}>FOLLOW US ON:</span>
           <ul className="flex gap-3 items-center">
-            <li><Link href="https://www.instagram.com/kailvalyaevents" target="_blank"><FaInstagram size={24} /></Link></li>
+            <li><Link href="https://www.instagram.com/hyderabadeventplanners" target="_blank"><FaInstagram size={24} /></Link></li>
             <li><Link href="/" target="_blank"><SlSocialFacebook size={24} /></Link></li>
             <li><Link href="/" target="_blank"><CiYoutube size={30} /></Link></li>
           </ul>
