@@ -22,14 +22,15 @@ const listItems = [
 const DecorCoverageSection = () => {
   return (
     <div className="w-full py-10 px-6 md:px-16 relative overflow-hidden">
-      {/* Background Image */}
+      {/* Background Image with Overlay */}
       <div className="absolute inset-0 -z-10">
         <Image
           src="/Image3.webp"
           alt="Background"
           fill
-          className="object-cover opacity-20"
+          className="object-cover opacity-50"
         />
+        <div className="absolute inset-0 bg-black opacity-60"></div>
       </div>
 
       <div className="grid md:grid-cols-2 gap-10 items-center relative z-10">
