@@ -41,13 +41,13 @@ const DecorCoverageSection = () => {
           transition={{ duration: 0.7 }}
           viewport={{ once: true }}
         >
-          <div className="overflow-hidden rounded-3xl border-[3px] border-[#c79f3e] shadow-lg">
+          <div className="overflow-hidden rounded-3xl border-[3px] lg:w-[80%] lg:h-[80%] border-[#c79f3e] shadow-lg">
             <Image
               src="/About.jpg"
               alt="Event Decoration"
               width={600}
               height={400}
-              className="object-cover w-full h-full"
+              className="object-cover w-full h-full "
             />
           </div>
         </motion.div>
