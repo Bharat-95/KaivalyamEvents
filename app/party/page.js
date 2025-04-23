@@ -121,7 +121,7 @@ const PartyHouseDecor = () => {
         >
           {["Themed Backdrops", "Mood Lighting", "Floral Decor", "Balloon Arches", "Seating Lounge", "Custom Signage"].map(
             (item, index) => (
-              <div key={index} className="border-2 border-[#c79f3e] py-8 px-4 rounded-xl shadow-md bg-white text-[#c79f3e]">
+              <div key={index} className="py-8 px-4 rounded-xl shadow-md bg-[#ffe5ae] hover:bg-white text-[#c79f3e]">
                 <h4 className="text-lg font-bold">{item}</h4>
               </div>
             )

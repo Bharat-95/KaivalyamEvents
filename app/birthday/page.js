@@ -125,7 +125,7 @@ const BirthdayDecorPage = () => {
         >
           {["Balloon Decor", "Custom Cake Table", "Photo Booth Setup", "Welcome Boards", "Return Gifts Display", "LED Light Signage"].map(
             (item, index) => (
-              <div key={index} className="border-2 border-[#c79f3e] py-8 px-4 rounded-xl shadow-md bg-white text-[#c79f3e]">
+              <div key={index} className=" py-8 px-4 rounded-xl shadow-md bg-[#ffe5ae] hover:bg-white text-[#c79f3e]">
                 <h4 className="text-lg font-bold">{item}</h4>
               </div>
             )

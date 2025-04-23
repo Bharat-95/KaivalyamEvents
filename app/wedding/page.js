@@ -124,7 +124,7 @@ const WeddingDecorPage = () => {
         >
           {["Floral Arches", "Stage Backdrops", "Seating Setup", "Table Centerpieces", "Welcome Entry Setup", "Lighting Decor"].map(
             (item, index) => (
-              <div key={index} className="border-2 border-[#c79f3e] py-8 px-4 rounded-xl shadow-md bg-white text-[#c79f3e]">
+              <div key={index} className=" py-8 px-4 rounded-xl shadow-md bg-[#ffe5ae] hover:bg-white text-[#c79f3e]">
                 <h4 className="text-lg font-bold">{item}</h4>
               </div>
             )

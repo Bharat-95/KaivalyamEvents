@@ -126,7 +126,7 @@ const BabyShowerDecorPage = () => {
             ].map((item, index) => (
               <div
                 key={index}
-                className="bg-[#ffe5ae] text-[#c79f3e] py-6 px-4 rounded-lg shadow text-center font-medium"
+                className="bg-[#ffe5ae] hover:bg-white text-[#c79f3e] py-6 px-4 rounded-lg shadow text-center font-medium"
               >
                 {item}
               </div>
