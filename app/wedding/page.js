@@ -58,7 +58,28 @@ const WeddingDecorPage = () => {
           />
         </div>
 
-    
+        {/* NEW Section - What We Offer (Image Right) */}
+        <div className="grid md:grid-cols-2 gap-10 items-center">
+          <Image
+            src="/Image5.webp"
+            alt="Wedding Decoration Details"
+            width={600}
+            height={400}
+            className="rounded-2xl border-4 border-[#c79f3e] h-80 object-cover"
+          />
+          <div className="space-y-4">
+            <h2 className="text-3xl font-bold">WHAT WE OFFER IN WEDDING RECEPTION DECORATION</h2>
+            <p>
+              We provide a full range of wedding and reception decoration services to cater to every couple’s distinctive tastes and preferences.
+              From stylish table centrepieces that ideally suit your dining style to elegant walkway designs that guide your guests gracefully — every touch matters.
+            </p>
+            <p>
+              Our florals are green, lush, and full of life, bringing a fresh softness to the entire setup.
+              Welcoming entryways greet guests with warmth, while our expertise in custom stage backdrops and theme-based decor ensures no detail is missed.
+              We pay close attention to every element, making your wedding decor both beautiful and meaningful.
+            </p>
+          </div>
+        </div>
 
         {/* Highlight Cards */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 text-center">
