@@ -4,7 +4,6 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { MdPhotoLibrary } from "react-icons/md";
-import { FaRegCommentDots } from "react-icons/fa";
 import { motion } from "framer-motion";
 
 const BabyShowerDecorPage = () => {
@@ -19,25 +18,50 @@ const BabyShowerDecorPage = () => {
           alt="Baby Shower Hero"
         />
         <div className="relative z-10 text-center py-24 px-4 max-w-screen-lg mx-auto">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-4xl md:text-5xl font-bold mb-4"
+          >
             BABY SHOWER DECORATIONS
-          </h1>
-          <p className="text-lg md:text-xl mb-6">
+          </motion.h1>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.9 }}
+            viewport={{ once: true }}
+            className="text-lg md:text-xl mb-6"
+          >
             Celebrate new beginnings with our charming and heartwarming baby shower setups, curated with love.
-          </p>
-          <div className="flex justify-center gap-4">
+          </motion.p>
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.7 }}
+            viewport={{ once: true }}
+            className="flex justify-center gap-4"
+          >
             <Link href="/gallery">
               <button className="bg-white text-black px-4 py-2 flex items-center gap-2 rounded shadow">
                 <MdPhotoLibrary /> Photo Gallery
               </button>
             </Link>
-          </div>
+          </motion.div>
         </div>
       </div>
 
-      {/* About Section */}
+      {/* About Sections */}
       <div className="py-16 px-6 md:px-20 max-w-screen-xl mx-auto space-y-12 text-[#c79f3e]">
-        <div className="grid md:grid-cols-2 gap-10 items-center">
+        {/* Section 1 */}
+        <motion.div
+          className="grid md:grid-cols-2 gap-10 items-center"
+          initial={{ opacity: 0, x: -40 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
           <div>
             <h2 className="text-3xl font-bold mb-4">
               PERSONALIZED BABY SHOWER THEMES
@@ -53,11 +77,18 @@ const BabyShowerDecorPage = () => {
             height={400}
             className="rounded-xl object-cover border-4 h-80 border-[#c79f3e]"
           />
-        </div>
+        </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-10 items-center">
+        {/* Section 2 */}
+        <motion.div
+          className="grid md:grid-cols-2 gap-10 items-center"
+          initial={{ opacity: 0, x: 40 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
           <Image
-            src="/babyshower2.jpg"
+            src="/Babyshower2.jpg"
             alt="Themed Baby Shower Decor"
             width={600}
             height={400}
@@ -71,9 +102,16 @@ const BabyShowerDecorPage = () => {
               From welcome boards, centerpieces, and balloon arches to cozy seating and thematic props, our decor is all about capturing the emotion of the moment. We ensure your celebration feels personal and picture-perfect.
             </p>
           </div>
-        </div>
+        </motion.div>
 
-        <div className="text-center">
+        {/* Offerings Grid */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.9 }}
+          viewport={{ once: true }}
+          className="text-center"
+        >
           <h2 className="text-3xl font-bold mb-6">
             OUR BABY SHOWER DECOR INCLUDES:
           </h2>
@@ -86,14 +124,24 @@ const BabyShowerDecorPage = () => {
               "Customized Welcome Boards",
               "Mom-to-Be Chair Styling"
             ].map((item, index) => (
-              <div key={index} className="bg-[#ffe5ae] text-[#c79f3e] py-6 px-4 rounded-lg shadow text-center font-medium">
+              <div
+                key={index}
+                className="bg-[#ffe5ae] text-[#c79f3e] py-6 px-4 rounded-lg shadow text-center font-medium"
+              >
                 {item}
               </div>
             ))}
           </div>
-        </div>
+        </motion.div>
 
-        <div className="text-center mt-16">
+        {/* CTA */}
+        <motion.div
+          className="text-center mt-16"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+          viewport={{ once: true }}
+        >
           <h2 className="text-2xl font-bold mb-4">
             WANT TO PLAN A DREAMY BABY SHOWER?
           </h2>
@@ -105,7 +153,7 @@ const BabyShowerDecorPage = () => {
               Contact Us
             </button>
           </Link>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

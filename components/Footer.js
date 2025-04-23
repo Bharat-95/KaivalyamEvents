@@ -27,7 +27,8 @@ const Footer = () => {
           </h3>
           <Link href="/" className="hover:underline text-sm">Home</Link>
           <Link href="/about" className="hover:underline text-sm">About Us</Link>
-          <Link href="/services" className="hover:underline text-sm">Our Services</Link>
+          <Link href="/services" className="hover:underline text-sm">Our Expertise</Link>
+          <Link href="/gallery" className="hover:underline text-sm">Portfolio</Link>
           <Link href="/contact" className="hover:underline text-sm">Contact</Link>
         </div>
 
