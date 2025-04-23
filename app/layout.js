@@ -2,6 +2,7 @@ import Header from "../components/Header";
 import "./globals.css";
 import Footer from "../components/Footer";
 import SectionSeparator from "../components/Seperator";
+import Whatsapp from "../components/Whatsapp";
 
 
 export const metadata = {
@@ -18,6 +19,7 @@ export default function RootLayout({ children }) {
         <Header />
         {children}
         <SectionSeparator />
+        <Whatsapp />
         <Footer />
       </body>
     </html>

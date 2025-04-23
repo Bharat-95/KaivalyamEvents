@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { Quicksand, Poppins } from "next/font/google";
 import { FaInstagram, FaFacebookF, FaEnvelope } from "react-icons/fa";
+import Whatsapp from "./Whatsapp";
 
 const quicksand = Quicksand({ weight: ["400", "700"], subsets: ["latin"], display: "swap" });
 const poppins = Poppins({ weight: ["400", "500"], subsets: ["latin"], display: "swap" });
