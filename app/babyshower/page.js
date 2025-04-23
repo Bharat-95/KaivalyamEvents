@@ -71,7 +71,7 @@ const BabyShowerDecorPage = () => {
             </p>
           </div>
           <Image
-            src="/babyShower1.jpg"
+            src="/BabyShower1.jpg"
             alt="Baby Shower Setup"
             width={600}
             height={400}
