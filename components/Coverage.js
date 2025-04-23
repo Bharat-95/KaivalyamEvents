@@ -21,8 +21,18 @@ const listItems = [
 
 const DecorCoverageSection = () => {
   return (
-    <div className="w-full py-10 px-6 md:px-16">
-      <div className="grid md:grid-cols-2 gap-10 items-center">
+    <div className="w-full py-10 px-6 md:px-16 relative overflow-hidden">
+      {/* Background Image */}
+      <div className="absolute inset-0 -z-10">
+        <Image
+          src="/Image3.webp"
+          alt="Background"
+          fill
+          className="object-cover opacity-20"
+        />
+      </div>
+
+      <div className="grid md:grid-cols-2 gap-10 items-center relative z-10">
         {/* Image */}
         <motion.div
           initial={{ opacity: 0, x: -30 }}
@@ -32,7 +42,7 @@ const DecorCoverageSection = () => {
         >
           <div className="overflow-hidden rounded-3xl border-[3px] border-[#c79f3e] shadow-lg">
             <Image
-              src="/About.jpg" // Replace with your actual image
+              src="/About.jpg"
               alt="Event Decoration"
               width={600}
               height={400}

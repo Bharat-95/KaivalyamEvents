@@ -13,69 +13,94 @@ const PartyHouseDecor = () => {
   return (
     <div className="w-full">
       {/* Hero Section */}
-      <div className="relative w-full h-[80vh] bg-black text-white overflow-hidden flex items-center justify-center">
+      <div className="relative w-full bg-black text-white overflow-hidden">
         <Image
           src="/Outdoor.jpg"
-          alt="Party House Decor Hero"
           fill
-          className="object-cover opacity-60"
+          className="object-cover absolute opacity-70"
+          alt="Party Hero"
         />
-        <div className="relative z-10 text-center">
-          <h1 className={`${quicksand.className} text-4xl md:text-5xl font-bold mb-4`}>PARTY HOUSE DECOR</h1>
-          <p className="text-lg md:text-xl max-w-2xl mx-auto">
-            Light up your celebrations with our elegant and joyful party house decorations — designed to impress and customized to your vibe.
+        <div className="relative max-w-screen-xl mx-auto px-4 md:px-10 py-20 text-center">
+          <h1 className="text-4xl md:text-5xl font-bold">PARTY HOUSE DECOR</h1>
+          <p className="mt-4 text-lg max-w-2xl mx-auto">
+            Make every party unforgettable with our vibrant and personalized decorations designed to suit any theme or mood.
           </p>
-          <div className="mt-6 flex justify-center gap-4">
+          <div className="flex justify-center gap-4 mt-6 flex-wrap">
             <Link href="/gallery">
-              <button className="bg-white text-[#c79f3e] px-6 py-2 rounded shadow-md flex items-center gap-2">
+              <button className="flex items-center gap-2 bg-white text-[#c79f3e] font-semibold px-4 py-2 rounded-md shadow-md">
                 <MdPhotoLibrary /> Photo Gallery
               </button>
             </Link>
           </div>
         </div>
+        <Image src="/wave-white.svg" width={1920} height={100} alt="wave" className="w-full" />
       </div>
 
-      {/* Introduction Section */}
-      <section className="max-w-screen-xl mx-auto py-20 px-6 md:px-12 text-[#c79f3e] space-y-6">
-        <h2 className="text-3xl font-bold text-center mb-4">Celebrate with Style</h2>
+      {/* Content Sections */}
+      <div className="max-w-screen-xl mx-auto px-6 md:px-12 py-20 space-y-20 text-[#c79f3e]">
+        {/* Section 1 */}
         <div className="grid md:grid-cols-2 gap-10 items-center">
-          <p className="text-lg">
-            Whether it’s a birthday bash, anniversary, promotion party, or festive gathering, Kaivalyam Events crafts the perfect ambiance to suit your occasion. Our party house décor transforms spaces with vibrant themes, lighting, balloon arches, table arrangements, and floral details.
-          </p>
+          <div className="space-y-4">
+            <h2 className="text-3xl font-bold">PARTY HOUSE DECOR EXPERTS</h2>
+            <p>
+              From cozy indoor gatherings to bold house party themes, Kaivalyam Events brings creativity, color, and elegance into every celebration. We design captivating setups with backdrops, props, and personalized installations.
+            </p>
+            <p>
+              Our decorators work with you to match your vibe — be it classic, modern, quirky, or royal — and ensure the space reflects joy, connection, and celebration.
+            </p>
+          </div>
           <Image
             src="/Corporate.jpeg"
             alt="Party Setup"
             width={600}
             height={400}
-            className="rounded-xl object-cover border-4 h-80 border-[#c79f3e]"
+            className="rounded-2xl border-4 border-[#c79f3e] h-80 object-cover"
           />
         </div>
 
-        <div className="grid md:grid-cols-2 gap-10 items-center mt-12">
+        {/* Section 2 */}
+        <div className="grid md:grid-cols-2 gap-10 items-center">
           <Image
             src="/Corporate.webp"
-            alt="Party Lights"
+            alt="Party Lighting"
             width={600}
             height={400}
-            className="rounded-xl object-cover border-4 border-[#c79f3e]"
+            className="rounded-2xl border-4 border-[#c79f3e] h-80 object-cover"
           />
-          <p className="text-lg">
-            We use elegant gold-accented props, stylish furniture, trendy backdrops, LED decor, and customized signage to create a sophisticated yet fun vibe. Our team ensures that every corner speaks the mood of celebration.
-          </p>
+          <div className="space-y-4">
+            <h2 className="text-3xl font-bold">DETAILS THAT DAZZLE</h2>
+            <p>
+              We specialize in chic lighting, balloon art, mood-enhancing LED signs, floral backdrops, and statement furniture setups. Whether it&apos;s a casual lounge or a themed celebration, we make it stylish and stress-free.
+            </p>
+            <p>
+              Let’s turn your house into the ultimate party venue — full of energy, beauty, and warmth.
+            </p>
+          </div>
         </div>
-      </section>
 
-      {/* CTA Section */}
-      <div className="bg-[#c79f3e] py-12 px-6 md:px-12 text-white text-center">
-        <h3 className="text-2xl md:text-3xl font-semibold mb-4">Let’s Make It Unforgettable</h3>
-        <p className="max-w-2xl mx-auto mb-6">
-          Ready to throw the most memorable party? Let Kaivalyam handle the decor while you enjoy the day with your loved ones.
-        </p>
-        <Link href="/contact">
-          <button className="bg-white text-[#c79f3e] px-6 py-2 rounded shadow-md font-semibold hover:bg-gray-100 transition">
-            Book a Free Consultation
-          </button>
-        </Link>
+        {/* Highlights */}
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 text-center">
+          {["Themed Backdrops", "Mood Lighting", "Floral Decor", "Balloon Arches", "Seating Lounge", "Custom Signage"].map(
+            (item, index) => (
+              <div key={index} className="border-2 border-[#c79f3e] py-8 px-4 rounded-xl shadow-md bg-white text-[#c79f3e]">
+                <h4 className="text-lg font-bold">{item}</h4>
+              </div>
+            )
+          )}
+        </div>
+
+        {/* CTA Section */}
+        <div className="text-center space-y-4">
+          <h3 className="text-2xl font-bold">PLAN THE ULTIMATE HOUSE PARTY</h3>
+          <p>
+            Contact Kaivalyam Events to turn your space into a party paradise. We’ll help you host a gathering that your guests will talk about for years.
+          </p>
+          <Link href="/contact">
+            <button className="bg-[#c79f3e] text-white px-6 py-2 rounded-md font-semibold hover:bg-[#b9892d] transition">
+              Book Now
+            </button>
+          </Link>
+        </div>
       </div>
     </div>
   );

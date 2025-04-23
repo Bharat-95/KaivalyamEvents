@@ -3,98 +3,87 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { motion } from "framer-motion";
 import { MdPhotoLibrary } from "react-icons/md";
-import { BsChatText } from "react-icons/bs";
+import { Pacifico, Quicksand } from "next/font/google";
+
+const pacifico = Pacifico({ weight: ["400"], subsets: ["latin"] });
+const quicksand = Quicksand({ weight: ["400", "700"], subsets: ["latin"] });
 
 const WeddingDecorPage = () => {
   return (
     <div className="w-full">
       {/* Hero Section */}
-      <div className="relative w-full text-white bg-black overflow-hidden h-[600px] flex items-center justify-center">
+      <div className="relative w-full bg-black text-white overflow-hidden">
         <Image
           src="/Image4.webp"
-          alt="Wedding Reception Setup"
           fill
-          className="object-cover absolute opacity-60"
+          className="object-cover absolute opacity-70"
+          alt="Wedding Decor Hero"
         />
-        <div className="relative z-10 text-center space-y-6">
+        <div className="relative max-w-screen-xl mx-auto px-4 md:px-10 py-20 text-center">
           <h1 className="text-4xl md:text-5xl font-bold">WEDDING RECEPTION DECORATIONS</h1>
-          <p className="text-lg md:text-xl">
+          <p className="mt-4 text-lg max-w-2xl mx-auto">
             Transform your wedding reception into a Royal and Dazzling Celebration
           </p>
-          <div className="flex justify-center gap-4">
+          <div className="flex justify-center gap-4 mt-6 flex-wrap">
             <Link href="/gallery">
-              <button className="bg-white text-black px-4 py-2 flex items-center gap-2 rounded-md">
+              <button className="flex items-center gap-2 bg-white text-[#c79f3e] font-semibold px-4 py-2 rounded-md shadow-md">
                 <MdPhotoLibrary /> Photo Gallery
               </button>
             </Link>
           </div>
         </div>
+        <Image src="/wave-white.svg" width={1920} height={100} alt="wave" className="w-full" />
       </div>
 
-      {/* Intro Section */}
-      <section className="py-16 px-6 md:px-20 bg-white text-[#c79f3e]">
+      {/* Content Sections */}
+      <div className="max-w-screen-xl mx-auto px-6 md:px-12 py-20 space-y-20 text-[#c79f3e]">
+        {/* Section 1 */}
         <div className="grid md:grid-cols-2 gap-10 items-center">
-          <div>
-            <h2 className="text-3xl font-bold mb-4">Best Wedding Decorations for Your Special Day</h2>
-            <p className="mb-4">
-              At Kaivalyam Events, we transform your vision into an unforgettable celebration. From grand floral arches to detailed table setups, every element is curated to reflect your style.
+          <div className="space-y-4">
+            <h2 className="text-3xl font-bold">EXPERIENCED WEDDING STYLISTS</h2>
+            <p>
+              From luxurious floral arches to curated seating arrangements, Kaivalyam Events crafts elegant wedding decor that captures the essence of your story.
             </p>
             <p>
-              Our expertise lies in creating moments of elegance and joy. Trust us to shape a reception that’s stunning, seamless, and memorable.
+              We manage everything from theme conceptualization to seamless day-of execution, ensuring your reception feels timeless and flawless.
             </p>
           </div>
-          <Image src="/Weddings.webp" alt="Stage Decor" width={600} height={400} className="rounded-xl" />
+          <Image
+            src="/Weddings.webp"
+            alt="Wedding Event Setup"
+            width={600}
+            height={400}
+            className="rounded-2xl border-4 border-[#c79f3e] h-80 object-cover"
+          />
         </div>
-      </section>
 
-      {/* What We Offer */}
-      <section className="py-16 px-6 md:px-20 bg-[#fff8ec] text-[#c79f3e]">
-        <div className="grid md:grid-cols-2 gap-10 items-center">
-          <Image src="/Image5.webp" alt="Decor Offerings" width={600} height={400} className="rounded-xl" />
-          <div>
-            <h2 className="text-2xl font-bold mb-4">What We Offer</h2>
-            <p className="mb-2">• Elegant Table Centerpieces</p>
-            <p className="mb-2">• Decorative Walkway Designs</p>
-            <p className="mb-2">• Lush Floral Installations</p>
-            <p className="mb-2">• Custom Themed Backdrops & Lighting</p>
-            <p>
-              Every setup is tailored to your preferences with our artistic touch to ensure a flawless event environment.
-            </p>
-          </div>
+    
+
+        {/* Highlight Cards */}
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 text-center">
+          {["Floral Arches", "Stage Backdrops", "Seating Setup", "Table Centerpieces", "Welcome Entry Setup", "Lighting Decor"].map(
+            (item, index) => (
+              <div key={index} className="border-2 border-[#c79f3e] py-8 px-4 rounded-xl shadow-md bg-white text-[#c79f3e]">
+                <h4 className="text-lg font-bold">{item}</h4>
+              </div>
+            )
+          )}
         </div>
-      </section>
 
-      {/* Gallery Highlights */}
-      <section className="py-16 px-6 md:px-20 bg-white text-[#c79f3e]">
-        <h2 className="text-center text-3xl font-bold mb-10">Our Signature Styles</h2>
-        <div className="grid md:grid-cols-3 gap-6">
-          {['Outdoor.jpg', 'About.jpg', 'Weddings.webp'].map((img, idx) => (
-            <Image key={idx} src={`/${img}`} alt={`Gallery ${idx}`} width={400} height={300} className="rounded-xl w-full h-64 object-cover" />
-          ))}
+        {/* Final CTA */}
+        <div className="text-center space-y-4">
+          <h3 className="text-2xl font-bold">CRAFT YOUR DREAM WEDDING WITH US</h3>
+          <p>
+            Reach out to Kaivalyam Events for wedding decoration that feels grand, heartfelt, and uniquely yours. We’re here to make it stunning and stress-free.
+          </p>
+          <Link href="/contact">
+            <button className="bg-[#c79f3e] text-white px-6 py-2 rounded-md font-semibold hover:bg-[#b9892d] transition">
+              Get In Touch
+            </button>
+          </Link>
         </div>
-      </section>
-
-      {/* Why Choose Us */}
-      <section className="py-16 px-6 md:px-20 bg-[#c79f3e] text-white">
-        <h2 className="text-3xl font-bold mb-6">Why Choose Kaivalyam Events?</h2>
-        <p className="mb-4">
-          We are driven by design, led by detail, and fueled by passion. Our bespoke planning process ensures no two events are ever the same.
-        </p>
-        <p>
-          With years of experience and unmatched dedication, we provide not just decor, but an experience that your guests will cherish forever.
-        </p>
-      </section>
-
-      {/* Final CTA */}
-      <section className="py-16 px-6 md:px-20 bg-black text-white text-center">
-        <h2 className="text-3xl font-bold mb-4">Let’s Craft Your Dream Wedding Reception</h2>
-        <p className="mb-6">Ready to plan something magical? We’re here for you.</p>
-        <Link href="/contact">
-          <button className="bg-[#c79f3e] text-white px-6 py-3 rounded-full font-semibold">Contact Us</button>
-        </Link>
-      </section>
+      </div>
     </div>
   );
 };
