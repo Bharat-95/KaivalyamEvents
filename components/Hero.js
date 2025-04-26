@@ -6,6 +6,7 @@ import Link from "next/link";
 import { FaInstagram } from "react-icons/fa";
 import { SlSocialFacebook } from "react-icons/sl";
 import { CiYoutube } from "react-icons/ci";
+import { motion } from "framer-motion"; // 👈 import motion
 
 const pacifico = Pacifico({ weight: ["400"], subsets: ["latin"], display: "swap" });
 const quicksand = Quicksand({ weight: ["400", "700"], subsets: ["latin"], display: "swap" });
@@ -52,32 +53,69 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="border border-[#c79f3e] mx-4 lg:mx-10 rounded-2xl shadow-lg overflow-hidden flex flex-col lg:flex-row lg:h-[85vh] md:h-[60vh]">
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+      viewport={{ once: true }}
+      className="border border-[#c79f3e] mx-4 lg:mx-10 rounded-2xl shadow-lg overflow-hidden flex flex-col lg:flex-row lg:h-[85vh] md:h-[60vh]"
+    >
       {/* Left Section */}
       <div className="lg:w-1/2 w-full flex flex-col items-center justify-center px-6 py-10 text-center space-y-4 relative">
-        <h1 className={`text-[28px] md:text-[36px] lg:text-[40px] text-[#c79f3e] ${quicksand.className} font-bold leading-snug`}>
+        
+        {/* Heading */}
+        <motion.h1
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          viewport={{ once: true }}
+          className={`text-[28px] md:text-[36px] lg:text-[40px] text-[#c79f3e] ${quicksand.className} font-bold leading-snug`}
+        >
           Welcome to{" "}
           <span className={`${pacifico.className} text-[36px] md:text-[42px] lg:text-[48px]`}>
             Kaivalyam Events
           </span>
-        </h1>
-        <p className={`${poppins.className} text-base md:text-lg lg:text-xl text-[#c79f3e]`}>
-          Crafting Moments, Creating Memories
-        </p>
+        </motion.h1>
 
-        <Link href="/contact" className={`bg-[#c79f3e] text-white py-2 px-4 mt-4 rounded-md shadow-md ${quicksand.className} font-semibold hover:translate-x-[1px] hover:-translate-y-[1px] duration-500 hover:shadow-white hover:shadow-xl`}>
-          Get a Quote
-        </Link>
+        {/* Paragraph */}
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          viewport={{ once: true }}
+          className={`${poppins.className} text-base md:text-lg lg:text-xl text-[#c79f3e]`}
+        >
+          Crafting Moments, Creating Memories
+        </motion.p>
+
+        {/* Button */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+          viewport={{ once: true }}
+        >
+          <Link href="/contact" className={`bg-[#c79f3e] text-white py-2 px-4 mt-4 rounded-md shadow-md ${quicksand.className} font-semibold hover:translate-x-[1px] hover:-translate-y-[1px] duration-500 hover:shadow-white hover:shadow-xl`}>
+            Get a Quote
+          </Link>
+        </motion.div>
 
         {/* Social Media Icons - Only visible on large screens */}
-        <div className="absolute lg:bottom-10 md:bottom-10 hidden md:flex items-center gap-4 text-[#c79f3e]">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.8 }}
+          viewport={{ once: true }}
+          className="absolute lg:bottom-10 md:bottom-10 hidden md:flex items-center gap-4 text-[#c79f3e]"
+        >
           <span className={`${poppins.className} font-medium`}>FOLLOW US ON:</span>
           <ul className="flex gap-3 items-center">
             <li><Link href="https://www.instagram.com/hyderabadeventplanners" target="_blank"><FaInstagram size={24} /></Link></li>
             <li><Link href="/" target="_blank"><SlSocialFacebook size={24} /></Link></li>
             <li><Link href="/" target="_blank"><CiYoutube size={30} /></Link></li>
           </ul>
-        </div>
+        </motion.div>
+
       </div>
 
       {/* Right Carousel Section */}
@@ -106,15 +144,21 @@ const Hero = () => {
       </div>
 
       {/* Social Icons on Mobile */}
-      <div className="md:hidden mt-4 mb-6 text-[#c79f3e] flex flex-col items-center gap-2">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 1 }}
+        viewport={{ once: true }}
+        className="md:hidden mt-4 mb-6 text-[#c79f3e] flex flex-col items-center gap-2"
+      >
         <span className={`${poppins.className} text-sm`}>FOLLOW US ON:</span>
         <ul className="flex gap-4 items-center">
           <li><Link href="https://www.instagram.com/hyderabadeventplanners" target="_blank"><FaInstagram size={22} /></Link></li>
           <li><Link href="/" target="_blank"><SlSocialFacebook size={22} /></Link></li>
           <li><Link href="/" target="_blank"><CiYoutube size={26} /></Link></li>
         </ul>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 };
 

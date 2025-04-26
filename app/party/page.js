@@ -86,30 +86,37 @@ const PartyHouseDecor = () => {
         </motion.div>
 
         {/* Section 2 */}
-        <motion.div
-          className="grid md:grid-cols-2 gap-10 items-center"
-          initial={{ opacity: 0, x: 40 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-        >
-          <Image
-            src="/Corporate.webp"
-            alt="Party Lighting"
-            width={600}
-            height={400}
-            className="rounded-2xl border-4 border-[#c79f3e] h-80 object-cover"
-          />
-          <div className="space-y-4">
-            <h2 className="text-3xl font-bold">DETAILS THAT DAZZLE</h2>
-            <p>
-              We specialize in chic lighting, balloon art, mood-enhancing LED signs, floral backdrops, and statement furniture setups. Whether it&apos;s a casual lounge or a themed celebration, we make it stylish and stress-free.
-            </p>
-            <p>
-              Let’s turn your house into the ultimate party venue — full of energy, beauty, and warmth.
-            </p>
-          </div>
-        </motion.div>
+       {/* Section 2 */}
+<motion.div
+  className="grid md:grid-cols-2 gap-10 items-center"
+  initial={{ opacity: 0, x: 40 }}
+  whileInView={{ opacity: 1, x: 0 }}
+  transition={{ duration: 0.8 }}
+  viewport={{ once: true }}
+>
+  {/* Content first on mobile */}
+  <div className="space-y-4 md:order-2">
+    <h2 className="text-3xl font-bold">DETAILS THAT DAZZLE</h2>
+    <p>
+      We specialize in chic lighting, balloon art, mood-enhancing LED signs, floral backdrops, and statement furniture setups. Whether it&apos;s a casual lounge or a themed celebration, we make it stylish and stress-free.
+    </p>
+    <p>
+      Let’s turn your house into the ultimate party venue — full of energy, beauty, and warmth.
+    </p>
+  </div>
+
+  {/* Image second on mobile */}
+  <div className="md:order-1">
+    <Image
+      src="/Corporate.webp"
+      alt="Party Lighting"
+      width={600}
+      height={400}
+      className="rounded-2xl border-4 border-[#c79f3e] h-80 object-cover"
+    />
+  </div>
+</motion.div>
+
 
         {/* Highlights */}
         <motion.div

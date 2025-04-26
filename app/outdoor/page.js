@@ -86,31 +86,38 @@ const OutdoorDecor = () => {
         </motion.div>
 
         {/* Section 2 */}
-        <motion.div
-          className="grid md:grid-cols-2 gap-10 items-center"
-          initial={{ opacity: 0, x: 40 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-        >
-          <Image
-            src="/Personal.jpeg"
-            alt="Garden Decoration"
-            width={600}
-            height={400}
-            className="rounded-2xl border-4 border-[#c79f3e] h-80 object-cover"
-          />
-          <div className="space-y-4">
-            <h2 className="text-3xl font-bold">WHAT WE OFFER</h2>
-            <ul className="list-disc list-inside text-lg space-y-2">
-              <li>Floral & Fabric Backdrops</li>
-              <li>Rustic Furniture & Thematic Decor</li>
-              <li>Lighting Setup for Evenings</li>
-              <li>Stage, Entry & Walkway Styling</li>
-              <li>Garden Installations & Signages</li>
-            </ul>
-          </div>
-        </motion.div>
+        {/* Section 2 */}
+<motion.div
+  className="grid md:grid-cols-2 gap-10 items-center"
+  initial={{ opacity: 0, x: 40 }}
+  whileInView={{ opacity: 1, x: 0 }}
+  transition={{ duration: 0.8 }}
+  viewport={{ once: true }}
+>
+  {/* Content first on mobile */}
+  <div className="space-y-4 md:order-2">
+    <h2 className="text-3xl font-bold">WHAT WE OFFER</h2>
+    <ul className="list-disc list-inside text-lg space-y-2">
+      <li>Floral & Fabric Backdrops</li>
+      <li>Rustic Furniture & Thematic Decor</li>
+      <li>Lighting Setup for Evenings</li>
+      <li>Stage, Entry & Walkway Styling</li>
+      <li>Garden Installations & Signages</li>
+    </ul>
+  </div>
+
+  {/* Image second on mobile */}
+  <div className="md:order-1">
+    <Image
+      src="/Personal.jpeg"
+      alt="Garden Decoration"
+      width={600}
+      height={400}
+      className="rounded-2xl border-4 border-[#c79f3e] h-80 object-cover"
+    />
+  </div>
+</motion.div>
+
 
         {/* Highlight Cards */}
         <motion.div

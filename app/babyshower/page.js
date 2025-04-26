@@ -34,7 +34,8 @@ const BabyShowerDecorPage = () => {
             viewport={{ once: true }}
             className="text-lg md:text-xl mb-6"
           >
-            Celebrate new beginnings with our charming and heartwarming baby shower setups, curated with love.
+            Celebrate new beginnings with our charming and heartwarming baby
+            shower setups, curated with love.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
@@ -67,7 +68,10 @@ const BabyShowerDecorPage = () => {
               PERSONALIZED BABY SHOWER THEMES
             </h2>
             <p className="text-lg">
-              At Kaivalyam Events, we specialize in heartwarming baby shower decor that reflects the joy of a growing family. Whether you envision a pastel paradise or a playful jungle theme, our decor blends softness, elegance, and charm.
+              At Kaivalyam Events, we specialize in heartwarming baby shower
+              decor that reflects the joy of a growing family. Whether you
+              envision a pastel paradise or a playful jungle theme, our decor
+              blends softness, elegance, and charm.
             </p>
           </div>
           <Image
@@ -87,20 +91,28 @@ const BabyShowerDecorPage = () => {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <Image
-            src="/Babyshower2.jpg"
-            alt="Themed Baby Shower Decor"
-            width={600}
-            height={400}
-            className="rounded-xl object-cover border-4 border-[#c79f3e]"
-          />
-          <div>
+          {/* Content first on mobile */}
+          <div className="md:order-2">
             <h2 className="text-3xl font-bold mb-4">
               ELEGANT DETAILS THAT MAKE A DIFFERENCE
             </h2>
             <p className="text-lg">
-              From welcome boards, centerpieces, and balloon arches to cozy seating and thematic props, our decor is all about capturing the emotion of the moment. We ensure your celebration feels personal and picture-perfect.
+              From welcome boards, centerpieces, and balloon arches to cozy
+              seating and thematic props, our decor is all about capturing the
+              emotion of the moment. We ensure your celebration feels personal
+              and picture-perfect.
             </p>
+          </div>
+
+          {/* Image second on mobile */}
+          <div className="md:order-1">
+            <Image
+              src="/Babyshower2.jpg"
+              alt="Themed Baby Shower Decor"
+              width={600}
+              height={400}
+              className="rounded-xl object-cover border-4 border-[#c79f3e]"
+            />
           </div>
         </motion.div>
 
@@ -122,7 +134,7 @@ const BabyShowerDecorPage = () => {
               "Table Centerpieces",
               "Photo Booth Corners",
               "Customized Welcome Boards",
-              "Mom-to-Be Chair Styling"
+              "Mom-to-Be Chair Styling",
             ].map((item, index) => (
               <div
                 key={index}
@@ -146,7 +158,8 @@ const BabyShowerDecorPage = () => {
             WANT TO PLAN A DREAMY BABY SHOWER?
           </h2>
           <p className="text-lg mb-4">
-            Contact our team to bring your baby shower vision to life. Elegant, themed, and stress-free.
+            Contact our team to bring your baby shower vision to life. Elegant,
+            themed, and stress-free.
           </p>
           <Link href="/contact">
             <button className="bg-[#c79f3e] text-white px-6 py-3 rounded-full font-semibold hover:scale-105 transition">

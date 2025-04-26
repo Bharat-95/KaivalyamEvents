@@ -88,32 +88,39 @@ const BirthdayDecorPage = () => {
         </motion.div>
 
         {/* Section 2 */}
-        <motion.div
-          className="grid md:grid-cols-2 gap-10 items-center"
-          initial={{ opacity: 0, x: 40 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-        >
-          <Image
-            src="/Image2.webp"
-            alt="Birthday Cake Table"
-            width={600}
-            height={400}
-            className="rounded-2xl border-4 border-[#c79f3e] h-80 object-cover"
-          />
-          <div className="space-y-4">
-            <h2 className="text-3xl font-bold">THEMES, COLORS & MEMORIES</h2>
-            <p>
-              Whether it&apos;s a jungle theme, princess dream, retro vibe or elegant gold party — we bring it to life with
-              rich styling, props, lighting and more.
-            </p>
-            <p>
-              We ensure your party ambiance is not just beautiful but also photogenic and fun for your guests. Let’s make
-              the next birthday your most memorable one yet!
-            </p>
-          </div>
-        </motion.div>
+       {/* Section 2 */}
+<motion.div
+  className="grid md:grid-cols-2 gap-10 items-center"
+  initial={{ opacity: 0, x: 40 }}
+  whileInView={{ opacity: 1, x: 0 }}
+  transition={{ duration: 0.8 }}
+  viewport={{ once: true }}
+>
+  {/* Content first on mobile */}
+  <div className="space-y-4 md:order-2">
+    <h2 className="text-3xl font-bold">THEMES, COLORS & MEMORIES</h2>
+    <p>
+      Whether it&apos;s a jungle theme, princess dream, retro vibe or elegant gold party — we bring it to life with
+      rich styling, props, lighting and more.
+    </p>
+    <p>
+      We ensure your party ambiance is not just beautiful but also photogenic and fun for your guests. Let’s make
+      the next birthday your most memorable one yet!
+    </p>
+  </div>
+
+  {/* Image second on mobile */}
+  <div className="md:order-1">
+    <Image
+      src="/Image2.webp"
+      alt="Birthday Cake Table"
+      width={600}
+      height={400}
+      className="rounded-2xl border-4 border-[#c79f3e] h-80 object-cover"
+    />
+  </div>
+</motion.div>
+
 
         {/* Highlight Cards */}
         <motion.div
